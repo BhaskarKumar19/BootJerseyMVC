@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.core.UriInfo;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.rest.messanger.modals.Link;
 import com.example.demo.rest.messanger.modals.Message;
@@ -30,7 +30,8 @@ import com.example.demo.rest.messanger.services.MessageService;
 @Consumes(MediaType.APPLICATION_JSON)
 public class MessageResource {
 
-	private MessageService ms = new MessageService();
+	@Autowired
+	private MessageService ms ;
 
 	
 	static{

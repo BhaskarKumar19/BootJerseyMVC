@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 import com.example.demo.rest.messanger.exception.DataNotFound;
 import com.example.demo.rest.messanger.modals.Message;
 import com.example.demo.rest.messanger.stubs.DatabaseStub;
 
+@Component
 public class MessageService {
 
 	private Map<Long, Message> messages = DatabaseStub.getAllMessages();

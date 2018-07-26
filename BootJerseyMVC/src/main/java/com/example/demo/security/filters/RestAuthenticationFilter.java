@@ -9,6 +9,7 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.glassfish.jersey.internal.util.Base64;
 import org.springframework.http.HttpMethod;
@@ -20,10 +21,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 
-import com.example.demo.security.jwt.JwtTokenAuthServiceImpl;
 import com.example.demo.security.jwt.TokenAuthService;
 import com.example.demo.security.models.UserPrincipal;
 import com.fasterxml.jackson.databind.ObjectMapper;
